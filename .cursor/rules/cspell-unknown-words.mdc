@@ -1,0 +1,14 @@
+---
+description: Unknown word 警告を cspell.json の words に追加して解消する
+alwaysApply: true
+---
+
+# cSpell Unknown word 対応
+
+Code Spell Checker の **Unknown word** が出たら、`cspell.json` の `words` 配列に単語を追加して警告をなくす。
+
+## 手順
+
+1. 正当な技術用語・パッケージ名・固有名詞のみ追加する。
+2. 誤字・typo は辞書に入れず、元テキストを修正する（説明用に登録済みの `pyhon` / `yenv` を除く）。
+3. `words` に追記。重複なし、**アルファベット順** に並べる。
