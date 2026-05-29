@@ -49,7 +49,9 @@ class SimpleTokenizerV1:
     """語彙に含まれるトークンのみを ID に変換するトークナイザ。"""
 
     def __init__(self, vocab: dict[str, int]) -> None:
+        # encodeメソッドとdecodeメソッドでアクセスできるように語彙をクラス属性として格納
         self.str_to_int = vocab
+        # トークンIDを元のテキストトークンにマッピングする逆引き語彙を作成
         self.int_to_str = {i: s for s, i in vocab.items()}
 
     def encode(self, text: str) -> list[int]:
